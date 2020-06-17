@@ -37,7 +37,7 @@ MainWindow::MainWindow(QWidget *parent)
     permanent->setText(tr("Ready    "));
     ui->statusbar->addPermanentWidget(permanent);
 
-    statusMessage = new QLabel(this);
+    //statusMessage = new QLabel(this);
     ui->statusbar->showMessage(tr("General Message"), 2000);
 
     connect(ui->newFile, &QAction::triggered,
