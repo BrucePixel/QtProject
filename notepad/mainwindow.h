@@ -3,6 +3,7 @@
 
 #include <QLabel>
 #include <QMainWindow>
+#include <QProcess>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -35,6 +36,7 @@ private slots:
     void statusBarView();
     void retCursorPos();
     void aboutHelp();
+    void newWindowFile();
 private:
     Ui::MainWindow *ui;
     QString filePath;
@@ -42,5 +44,6 @@ private:
     QLabel *permanent;
     QLabel *statusMessage;
     QLabel *cursorPos;
+    QProcess myProcess;
 };
 #endif // MAINWINDOW_H

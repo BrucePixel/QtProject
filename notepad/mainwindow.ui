@@ -34,6 +34,7 @@
      <string>&amp;File</string>
     </property>
     <addaction name="newFile"/>
+    <addaction name="newWindowFile"/>
     <addaction name="openFile"/>
     <addaction name="saveFile"/>
     <addaction name="saveFileAs"/>
@@ -210,6 +211,14 @@
   <action name="aboutHelp">
    <property name="text">
     <string>About</string>
+   </property>
+  </action>
+  <action name="newWindowFile">
+   <property name="text">
+    <string>New Window</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+N</string>
    </property>
   </action>
  </widget>

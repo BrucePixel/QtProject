@@ -37,7 +37,7 @@ MainWindow::MainWindow(QWidget *parent)
     permanent->setText(tr("Ready    "));
     ui->statusbar->addPermanentWidget(permanent);
 
-    //statusMessage = new QLabel(this);
+    // statusMessage = new QLabel(this);
     ui->statusbar->showMessage(tr("General Message"), 2000);
 
     connect(ui->newFile, &QAction::triggered,
@@ -76,6 +76,8 @@ MainWindow::MainWindow(QWidget *parent)
             this, &MainWindow::retCursorPos);
     connect(ui->aboutHelp, &QAction::triggered,
             this, &MainWindow::aboutHelp);
+    connect(ui->newWindowFile, &QAction::triggered,
+            this, &MainWindow::newWindowFile);
 }
 
 MainWindow::~MainWindow()
@@ -258,4 +260,10 @@ void MainWindow::retCursorPos()
 void MainWindow::aboutHelp()
 {
     QMessageBox::about(this, "about Notepad","notepad was developed by Bruce");
+}
+
+void MainWindow::newWindowFile()
+{
+    // myProcess.start("notepad.exe");
+    myProcess.startDetached("notepad.exe");
 }
